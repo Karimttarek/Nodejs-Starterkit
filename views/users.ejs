@@ -1,0 +1,15 @@
+<%- include('./components/header.ejs') %>
+
+<div class="container">
+  <h1>USERS</h1>
+  <% if(users.length > 0 ){ %>
+    <% users.forEach(blogs => { %>
+      <h3><%= users.fname %></h3>
+      <p><%= users.email %></p>
+      <% }) %> 
+       <% } else { %>
+        <p>There is no users ...</p>
+      <% } %>
+</div>
+
+<%- include('./components/footer.ejs') %>
