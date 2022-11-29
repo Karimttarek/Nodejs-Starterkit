@@ -11,13 +11,12 @@ const CloudURI = 'mongodb+srv://' + process.env.DB_USERNAME + ':<' + process.env
 // mongoDB compass
 const CompassURI = process.env.DB_CONNECTION +'://127.0.0.1:'+ process.env.DB_PORT; // mongodb://localhost:27017
 
-const DB =  mongoose.connect(CompassURI , options)
+mongoose.connect(CompassURI , options)
 //    .then((result) => console.log('Connection success'))
    .catch((err) => console.log(err));
 
    
 module.exports = {
     CloudURI,
-    CompassURI,
-    DB
+    CompassURI
 };
